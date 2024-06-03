@@ -183,7 +183,7 @@ header.active {
     height: 30px;
     background: var(--dark-orange);
     right: 0;
-    top: 42%;
+    top: calc(50% - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1057,7 +1057,7 @@ button.hoverB {
 }
 
 .allImgS {
-    display: grid;
+    display: flex;
     gap: 20px;
 }
 
@@ -1069,8 +1069,8 @@ button.hoverB {
 }
 
 .allImgS .imgDis img {
+    width: 100%;
     object-fit: cover;
-    height: 225px;
     transition: .5s linear;
 }
 
@@ -1085,7 +1085,8 @@ button.hoverB {
 
 .textIm {
     position: absolute;
-    top: 15%;
+    top: 50%;
+    transform: translateY(-50%);
     left: 10%;
 }
 
@@ -1433,9 +1434,11 @@ footer button {
         grid-column: 1/3;
         grid-row: 1/3;
     }
-
+    .fx1 h2{
+        font-size: 10px !important;
+    }
     .fx1 img {
-        height: 150% !important;
+        /* height: 150% !important; */
     }
 
     .imgDis.fx4 {
@@ -1913,6 +1916,31 @@ header.active i {
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: opeed 1s 2.5s ease infinite;
+}
+.controlFlex{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.w-controldiscount{
+    width: 50%;
+}
+
+@media (max-width: 1363px) {
+    .controlFlex{
+        flex-direction: column;
+    }
+    .allImgS{
+        flex-direction: column;
+    }
+    .lastEdit{
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+    .w-controldiscount{
+        width: 100%;
+    }
 }
 
 @keyframes rott {
