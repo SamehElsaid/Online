@@ -69,7 +69,7 @@ night.addEventListener("click", function () {
 
 // Text animation for promotional text
 let textInnx = document.querySelector(".texttype");
-let x = "Supper delicious Burger in town!";
+let x = "upper delicious Burger in town!";
 let i = 0;
 
 function animation() {
@@ -77,7 +77,7 @@ function animation() {
         textInnx.innerHTML += x.charAt(i);
         i++;
     } else {
-        textInnx.innerHTML = "";
+        textInnx.innerHTML = "s";
         i = 0;
     }
     setTimeout(animation, 300);
